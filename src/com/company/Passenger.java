@@ -1,12 +1,16 @@
 package com.company;
 
+
+
+
 public class Passenger {
 
-    int id;
+
+    private int id;
     private Address address;
     private Contact contact;
 
-    //counter attribute
+
     private static  int idCounter;
 
 
@@ -23,6 +27,30 @@ public class Passenger {
             this.state = state;
         }
 
+
+        public String getStreet() {
+            return street;
+        }
+
+        public void setStreet(String street) {
+            this.street = street;
+        }
+
+        public String getCity() {
+            return city;
+        }
+
+        public void setCity(String city) {
+            this.city = city;
+        }
+
+        public String getState() {
+            return state;
+        }
+
+        public void setState(String state) {
+            this.state = state;
+        }
 
 
 
@@ -53,6 +81,29 @@ public class Passenger {
         }
 
 
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getPhone() {
+            return phone;
+        }
+
+        public void setPhone(String phone) {
+            this.phone = phone;
+        }
+
+        public String getEmail() {
+            return email;
+        }
+
+        public void setEmail(String email) {
+            this.email = email;
+        }
 
         public String getContactDetails(){
             return "Name: " + name +  ", Phone: " + phone +  ", Email: " + email + " ";
@@ -73,6 +124,36 @@ public class Passenger {
         this.contact = contact;
 
         id = ++idCounter;
+    }
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setAddress(String[] addressDetails) {
+        address.updateAddressDetails(addressDetails);
+    }
+
+    public void setContact(String[] contactDetails) {
+        contact.updateContactDetails(contactDetails);
+    }
+
+    public String getPassenger(){
+        return "ID: " + id + " " + getContact() + getAddress();
+    }
+
+    public void setPassenger(String[] contactDetails, String[] addressDetails){
+        address.updateAddressDetails(addressDetails);
+        contact.updateContactDetails(contactDetails);
+    }
+
+    public String getContact(){
+        return contact.getContactDetails();
+    }
+
+    public String getAddress(){
+        return address.getAddressDetails();
     }
 
 

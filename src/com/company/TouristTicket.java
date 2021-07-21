@@ -2,11 +2,11 @@ package com.company;
 
 public class TouristTicket extends Ticket{
 
-    //attributes
+
     private String hotelAddress;
     private String[] selectedTouristLocation = new String[5];
 
-    //constructor with inherited attributes
+
     public TouristTicket(String hotelAddress, String[] selectedTouristLocation, String pnr, String from, String to,  String departureDateTime, String arrivalDateTime, String seatNo, float price, boolean cancelled, String flightNumber, String airline, int capacity, int bookedSeats, String street, String city, String state, String name, String phone, String email) {
         super(pnr, from, to, departureDateTime, arrivalDateTime, seatNo, price, cancelled, flightNumber, airline, capacity, bookedSeats, street, city, state, name, phone, email);
         this.hotelAddress = hotelAddress;
@@ -59,3 +59,5 @@ public class TouristTicket extends Ticket{
     }
 
 }
+
+
