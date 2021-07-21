@@ -22,6 +22,12 @@ public class Ticket {
         this.seatNo = seatNo;
         this.price = price;
         this.cancelled = cancelled;
+        Flight flight = new Flight(flightNumber, airline, capacity, bookedSeats);
+        this.flight = flight;
+
+        Passenger passenger = new Passenger(street, city, state, name, phone, email);
+        this.passenger = passenger;
+
     }
     public String checkStatus(){
         String status;
@@ -42,5 +48,7 @@ public class Ticket {
     public void cancel(){
         cancelled = true;
     }
-
+    public static void printDetails(Ticket ticket){
+        System.out.println("PNR: " + ticket.getPnr());
+    }
 }
